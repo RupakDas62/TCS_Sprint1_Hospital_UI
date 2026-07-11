@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Search Patient</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/patient.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        Search Patient
+
+    </h1>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchPatientId"
+            placeholder="Enter Patient ID (Example: P1001)">
+
+        <button id="searchBtn">
+
+            Search
+
+        </button>
+
+    </div>
+
+    <div id="patientDetails" class="details-card" style="display:none;">
+
+        <h2>Patient Information</h2>
+
+        <div class="grid">
+
+            <div class="input-group">
+                <label>Patient ID</label>
+                <input type="text" id="patientId" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>First Name</label>
+                <input type="text" id="firstName" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Last Name</label>
+                <input type="text" id="lastName" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Age</label>
+                <input type="text" id="age" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Gender</label>
+                <input type="text" id="gender" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Date of Birth</label>
+                <input type="text" id="dob" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Blood Group</label>
+                <input type="text" id="bloodGroup" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Phone</label>
+                <input type="text" id="phone" readonly>
+            </div>
+
+            <div class="input-group full">
+                <label>Address</label>
+                <textarea id="address" readonly></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="text" id="email" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Doctor</label>
+                <input type="text" id="doctor" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Disease</label>
+                <input type="text" id="disease" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Room Type</label>
+                <input type="text" id="roomType" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Admission Date</label>
+                <input type="text" id="admissionDate" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>Status</label>
+                <input type="text" id="status" readonly>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/storage.js"></script>
+<script src="../js/searchPatient.js"></script>
+
+</body>
+
+</html>
