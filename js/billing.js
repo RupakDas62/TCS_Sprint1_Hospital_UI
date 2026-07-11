@@ -6,15 +6,22 @@ if(localStorage.getItem("loggedIn")!=="true"){
 
 let currentPatient=null;
 
-let roomRates={};
+// let roomRates={};
 
-fetch("../data/roomRates.json")
-.then(response=>response.json())
-.then(data=>{
+// fetch("../data/roomRates.json")
+// .then(response=>response.json())
+// .then(data=>{
+//     roomRates=data;
+//     console.log(JSON.stringify(roomRates));
+// });
 
-    roomRates=data;
+const roomRates = {
+    "General": 1000,
+    "Semi Private": 2500,
+    "Private": 4500,
+    "ICU": 8000
+};
 
-});
 
 document.getElementById("searchBtn").addEventListener("click",()=>{
 
@@ -93,5 +100,49 @@ document.getElementById("calculateBtn").addEventListener("click",()=>{
 document.getElementById("printBtn").addEventListener("click",()=>{
 
     window.print();
+
+});
+
+document.getElementById("updateBillBtn").addEventListener("click", () => {
+
+    if(currentPatient === null){
+
+        alert("Please search a patient first.");
+
+        return;
+
+    }
+
+    const patients = Storage.getPatients();
+
+    const index = patients.findIndex(patient =>
+        patient.patientId === currentPatient.patientId
+    );
+
+    if(index === -1){
+
+        alert("Patient not found.");
+
+        return;
+
+    }
+
+    patients[index].bill = {
+
+        daysStayed: Number(document.getElementById("days").value),
+
+        roomBill: Number(document.getElementById("roomBill").value),
+
+        medicineBill: Number(document.getElementById("medicine").value),
+
+        diagnosticsBill: Number(document.getElementById("diagnostics").value),
+
+        totalBill: Number(document.getElementById("totalBill").value)
+
+    };
+
+    Storage.savePatients(patients);
+
+    alert("Billing details updated successfully.");
 
 });

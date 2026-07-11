@@ -16,7 +16,7 @@ searchBtn.addEventListener("click",()=>{
 
     const patients=Storage.getPatients();
 
-    patientIndex=patients.findIndex(patient=>patient.patientId===id);
+    patientIndex=patients.findIndex(patient=>patient.patientId===id && patient.active);
 
     if(patientIndex===-1){
 

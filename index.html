@@ -1,63 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management System | Login</title>
+
+    <title>Hospital Management System</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
+
 <body>
 
-    <div class="login-container">
+    <header>
 
-        <div class="login-card">
+        <div class="logo">
 
-            <h1>Hospital Management System</h1>
-            <p>Please login to continue</p>
+            <i class="fa-solid fa-hospital"></i>
 
-            <form id="loginForm">
+            <div>
 
-                <div class="input-group">
-                    <label>User ID</label>
-                    <input
-                        type="text"
-                        id="userId"
-                        placeholder="Enter User ID"
-                        required
-                    >
-                </div>
+                <h1>Hospital Management System</h1>
 
-                <div class="input-group">
-                    <label>Password</label>
+                <p>Patient Information & Billing Portal</p>
 
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Enter Password"
-                        required
-                    >
-                </div>
-
-                <div class="show-password">
-                    <input type="checkbox" id="showPassword">
-                    <label for="showPassword">Show Password</label>
-                </div>
-
-                <button type="submit">
-                    Login
-                </button>
-
-                <p id="error"></p>
-
-            </form>
+            </div>
 
         </div>
 
-    </div>
+    </header>
 
-<script src="js/auth.js"></script>
+    <main>
+
+        <div class="overlay">
+
+            <div class="portal-container">
+
+                <!-- Patient Portal -->
+
+                <div class="portal-card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <small>PUBLIC ACCESS</small>
+
+                    <h2>Patient Portal</h2>
+
+                    <p>
+
+                        Patients can login to search their records,
+                        view admission details and download billing
+                        information.
+
+                    </p>
+
+                    <a href="pages/patientLogin.html" class="portal-btn">
+
+                        Access Patient Portal
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- Admin Portal -->
+
+                <div class="portal-card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-user-doctor"></i>
+
+                    </div>
+
+                    <small>AUTHORIZED PERSONNEL ONLY</small>
+
+                    <h2>Administrator Portal</h2>
+
+                    <p>
+
+                        Hospital staff can manage patients,
+                        update records, search details and
+                        generate bills.
+
+                    </p>
+
+                    <a href="pages/adminLogin.html" class="portal-btn">
+
+                        Access Admin Portal
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        Hospital Management System © 2026
+
+    </footer>
 
 </body>
+
 </html>

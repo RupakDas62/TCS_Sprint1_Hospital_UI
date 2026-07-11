@@ -12,10 +12,13 @@ const active=patients.filter(patient=>patient.active!==false);
 
 document.getElementById("activePatients").textContent=active.length;
 
-document.getElementById("today").textContent=new Date().toLocaleDateString();
+console.log(document.getElementById("logoutBtn"));
+
+// document.getElementById("today").textContent=new Date().toLocaleDateString();
 
 document.getElementById("logoutBtn").addEventListener("click",()=>{
 
+    console.log("Logout button clicked");
     localStorage.removeItem("loggedIn");
 
     window.location.href="index.html";

@@ -16,6 +16,10 @@ form.addEventListener("submit",function(e){
 
     const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    const pass = document.getElementById("password").value;
+
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{8,}$/;
+
     const age=parseInt(document.getElementById("age").value);
 
     if(age<1 || age>120){
@@ -24,6 +28,15 @@ form.addEventListener("submit",function(e){
 
         return;
 
+    }
+
+    console.log(pass);
+    console.log(passwordRegex.test(pass));
+
+    if(!passwordRegex.test(pass) ) {
+        alert("Invalid Pass");
+
+        return;
     }
 
     const phone=document.getElementById("phone").value.trim();
@@ -75,6 +88,8 @@ form.addEventListener("submit",function(e){
         phone:phone,
 
         email:email,
+
+        password:document.getElementById("password").value,
 
         address:document.getElementById("address").value,
 
