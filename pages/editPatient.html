@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Patient</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/patient.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Edit Patient</h1>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchId"
+            placeholder="Enter Patient ID"
+        >
+
+        <button id="searchBtn">Search</button>
+
+    </div>
+
+    <form id="editForm" style="display:none;">
+
+        <div class="grid">
+
+            <div class="input-group">
+                <label>Patient ID</label>
+                <input type="text" id="patientId" readonly>
+            </div>
+
+            <div class="input-group">
+                <label>First Name</label>
+                <input type="text" id="firstName">
+            </div>
+
+            <div class="input-group">
+                <label>Last Name</label>
+                <input type="text" id="lastName">
+            </div>
+
+            <div class="input-group">
+                <label>Age</label>
+                <input type="number" id="age">
+            </div>
+
+            <div class="input-group">
+                <label>Gender</label>
+
+                <select id="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>DOB</label>
+                <input type="date" id="dob">
+            </div>
+
+            <div class="input-group">
+                <label>Blood Group</label>
+
+                <select id="bloodGroup">
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                </select>
+
+            </div>
+
+            <div class="input-group">
+                <label>Phone</label>
+                <input type="text" id="phone">
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="email">
+            </div>
+
+            <div class="input-group full">
+                <label>Address</label>
+                <textarea id="address"></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Disease</label>
+                <input type="text" id="disease">
+            </div>
+
+            <div class="input-group">
+                <label>Doctor</label>
+                <input type="text" id="doctor">
+            </div>
+
+            <div class="input-group">
+                <label>Admission Date</label>
+                <input type="date" id="admissionDate">
+            </div>
+
+            <div class="input-group">
+                <label>Room Type</label>
+
+                <select id="roomType">
+                    <option>General</option>
+                    <option>Semi Private</option>
+                    <option>Private</option>
+                    <option>ICU</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button type="submit">
+                Update Patient
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+<script src="../js/storage.js"></script>
+<script src="../js/editPatient.js"></script>
+
+</body>
+
+</html>

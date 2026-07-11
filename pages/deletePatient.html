@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Patient</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/patient.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Delete Patient</h1>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchId"
+            placeholder="Enter Patient ID"
+        >
+
+        <button id="searchBtn">
+            Search
+        </button>
+
+    </div>
+
+    <div id="patientCard" class="patient-card" style="display:none;">
+
+        <h2>Patient Details</h2>
+
+        <p><strong>ID :</strong> <span id="id"></span></p>
+
+        <p><strong>Name :</strong> <span id="name"></span></p>
+
+        <p><strong>Age :</strong> <span id="age"></span></p>
+
+        <p><strong>Gender :</strong> <span id="gender"></span></p>
+
+        <p><strong>Disease :</strong> <span id="disease"></span></p>
+
+        <p><strong>Doctor :</strong> <span id="doctor"></span></p>
+
+        <p><strong>Room :</strong> <span id="room"></span></p>
+
+        <button id="deleteBtn" class="delete-btn">
+            Delete Patient
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/storage.js"></script>
+<script src="../js/deletePatient.js"></script>
+
+</body>
+
+</html>

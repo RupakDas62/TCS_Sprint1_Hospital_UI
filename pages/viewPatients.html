@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Patients</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/table.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Patient Records</h1>
+
+    <div class="toolbar">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by Patient ID or Name..."
+        >
+
+    </div>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Disease</th>
+            <th>Doctor</th>
+            <th>Room</th>
+            <th>Phone</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody id="patientTable">
+
+        </tbody>
+
+    </table>
+
+    <div class="pagination">
+
+        <button id="prevBtn">Previous</button>
+
+        <span id="pageNumber"></span>
+
+        <button id="nextBtn">Next</button>
+
+    </div>
+
+</div>
+
+<script src="../js/storage.js"></script>
+<script src="../js/viewPatients.js"></script>
+
+</body>
+
+</html>
